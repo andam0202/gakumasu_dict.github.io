@@ -7,9 +7,16 @@
 
   {% elsif page.layout == "page" or page.layout == "home" or page.layout == "blog" %}
     <section class="section  section--description">
-      <h3>About this site</h3>
+      <!-- <h3>About this site</h3>
       <p>{{ site.description }}</p>
-      {% include nav-social.html %}
+      {% include nav-social.html %} -->
+
+
+    <!-- assetsフォルダ内のtest.png画像を追加 -->
+      <img src="{{ '../assets/images/RockHiro.gif' | relative_url }}" alt="Test Image">
+    <!-- 画像の説明として"Test Image"を設定 -->
+      <img src="{{ '../assets/images/RockHiro.gif' | relative_url }}" alt="Test Image">
+      <img src="{{ '../assets/images/RockHiro.gif' | relative_url }}" alt="Test Image">
     </section>
 
   {% elsif page.layout == "categories" %}

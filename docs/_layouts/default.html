@@ -1,58 +1,90 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<!-- <html lang="{{ site.lang | default: "en-US" }}"> -->
+  <html lang="{{ site.lang | default: "ja-JP" }}">
+  <!-- サイトの言語を設定。デフォルトは英語 -->
 
   <head>
     <!-- General meta -->
     <meta charset="utf-8">
+    <!-- ページの文字エンコーディングをUTF-8に設定 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ビューポートの設定で、モバイルデバイスでも適切に表示されるようにする -->
 
     {% if page.indexing == false %}
       <meta name="robots" content="noindex">
+      <!-- ページがインデックスされないように検索エンジンに指示 -->
     {% endif %}
 
     {% if page.collectionpage %}
       {% seo title=false %}
+      <!-- SEOプラグインを使用しつつ、タイトルの自動生成を無効化 -->
 
       {% assign collectiondata = site.collections | where: "label", page.collectionpage | first %}
+      <!-- コレクションページのデータを取得 -->
       <title>{{ collectiondata.title }} - {{ site.title }}</title>
+      <!-- ページタイトルをコレクションのタイトルとサイトのタイトルに設定 -->
       <meta property="og:title" content="{{ collectiondata.title }}">
+      <!-- ソーシャルメディア用のOG（Open Graph）タイトルを設定 -->
       <meta name="description" content="{{ collectiondata.description }}">
+      <!-- ページの説明文を設定 -->
       <meta property="og:description" content="{{ collectiondata.description }}">
+      <!-- ソーシャルメディア用のOG説明文を設定 -->
     {% else %}
       {% seo %}
+      <!-- 通常のSEO設定を使用 -->
     {% endif %}
+
     {% if site.fonts.preconnect_urls %}
       {% for url in site.fonts.preconnect_urls %}
         <link rel="preconnect" href="{{ url }}" crossorigin />
+        <!-- フォントの読み込みを高速化するための事前接続設定 -->
       {% endfor %}
     {% endif %}
 
     <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
+    <!-- ウェブアプリケーションマニフェストへのリンク -->
     <meta name="theme-color" content="{{ site.manifest.theme_color | default: '#242e2b' }}"/>
+    <!-- ブラウザのテーマカラーを設定 -->
 
     {% if site.css_inline == true %}
       {% include site-styles.html %}
+      <!-- CSSをインラインで含める場合 -->
     {% else %}
       <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
+      <!-- 外部CSSファイルをリンクする場合 -->
     {% endif %}
 
-    {% if site.favicons or site.avatarurl %}{% include site-favicons.html %}{% endif %}
+    {% if site.favicons or site.avatarurl %}
+      {% include site-favicons.html %}
+      <!-- ファビコンやアバター画像を含める場合 -->
+    {% endif %}
 
-    {% if site.google_analytics %}{% include site-analytics.html %}{% endif %}
+    {% if site.google_analytics %}
+      {% include site-analytics.html %}
+      <!-- Google Analyticsのスクリプトを含める場合 -->
+    {% endif %}
 
     {% include site-fonts.html %}
+    <!-- フォントの設定を含める -->
 
     {% include site-before-start.html %}
+    <!-- ヘッダー終了前に追加したいカスタムHTMLを含める -->
   </head>
 
   <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
+    <!-- ページのレイアウトとスラッグ化したタイトルをボディのクラスとして設定 -->
     {% include site-icons.svg %}
+    <!-- SVG形式のアイコンを含める -->
 
     {{ content }}
+    <!-- ページのメインコンテンツを挿入 -->
 
-    {% if site.service_worker != false %}{% include site-sw.html %}{% endif %}
+    {% if site.service_worker != false %}
+      {% include site-sw.html %}
+      <!-- サービスワーカーを登録する場合 -->
+    {% endif %}
 
     {% include site-before-end.html %}
+    <!-- ボディ終了前に追加したいカスタムHTMLを含める -->
   </body>
-
 </html>
