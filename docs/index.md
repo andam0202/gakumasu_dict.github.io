@@ -25,7 +25,7 @@ test
 - 下のリンクからgakumasu_dict.txtをダウンロード
 - ダウンロードしたファイルをURLに従ってインストール
 
-- [テキストファイルをダウンロード](distributed_file.txt)
+<a href="distributed_file.txt" download>テキストファイルをダウンロード</a>
 
 test
 
