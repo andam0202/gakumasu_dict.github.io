@@ -123,7 +123,7 @@ css_inline: true # Will insert all styles into a single <style> block in the <he
 #   512: '/assets/logos/logo@512px.png'
 #   1024: '/assets/logos/logo@1024px.png'
 # icoファイルを使う場合
-ico_favicon: '/assets/logos/favicon.png'
+ico_favicon: '/assets/logos/favicon.ico'
 
 
 # 9. Site navigation
