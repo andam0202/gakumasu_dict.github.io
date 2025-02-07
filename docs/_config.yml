@@ -71,6 +71,7 @@ collections:
       Welcome to the blog
     feature_image: "https://picsum.photos/2560/600?image=866"
 
+
 # 6. Jekyll collections settings
 defaults:
   -
@@ -127,7 +128,7 @@ favicons:
 #   512: '/assets/logos/logo@512px.png'
 #   1024: '/assets/logos/logo@1024px.png'
 # icoファイルを使う場合
-ico_favicon: '/assets/logos/favicon.ico'
+# favicon: '/assets/logos/favicon.ico'
 
 
 # 9. Site navigation
@@ -135,7 +136,7 @@ navigation_header:
 - title: ホーム
   url: /
 - title: Elements
-  url: /elements/
+  url: /gakumasu_dict.github.io/elements/
 - title: 更新記録
   url: /update/
 # - title: Blog
