@@ -3,7 +3,7 @@ title: 学マス素材配布テスト
 # feature_text: |
 #   学マス関連の語彙をまとめたwindows向け辞書です
 # feature_image: "https://picsum.photos/1300/400?image=989"
-feature_image: "/assets/images/kotone_dokodoko.gif"
+feature_image: "./assets/images/kotone_dokodoko.gif"
 # feature_image: "/assets/favicon-512×512.png"
 # feature_image: "https://picsum.photos/2560/600?image=866"
 # feature_image: "/assets/images/banner_kotone.jpg"
