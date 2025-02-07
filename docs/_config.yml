@@ -102,8 +102,10 @@ description: "Alembic is a starting point for Jekyll projects. Rather than start
 # url: "https://alembic.darn.es" # Site url, also used in jekyll-seo-tag
 url: "https://gakumasu_dict.github.io"
 baseurl: "/gakumasu_dict.github.io/"
-repo: "https://github.com/daviddarnes/alembic"
-email: "me@daviddarnes.com"
+# repo: "https://github.com/daviddarnes/alembic"
+repo: "https://github.com/andam0202/gakumasu_dict.github.io"
+# email: "me@daviddarnes.com"
+email: "mvkvndva11@gmail.com"
 
 
 # disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
@@ -137,7 +139,7 @@ navigation_header:
 - title: ホーム
   url: /
 - title: Elements
-  url: /gakumasu_dict.github.io/elements/
+  url: /elements/
 - title: 更新記録
   url: /update/
 # - title: Blog
