@@ -28,7 +28,7 @@ test
 <!-- <a href="distributed_file.txt" download>テキストファイルをダウンロード</a> -->
 <!-- distributed_file.txtをassetsフォルダ内に移動した場合は以下のようにする -->
 <a href="{{ '/assets/gakumasu_dict.txt' | relative_url }}" download>ダウンロード</a>
-<a href="{{ './assets/gakumasu_dict.txt' | relative_url }}" download>ダウンロード2</a>
+<!-- <a href="{{ './assets/gakumasu_dict.txt' | relative_url }}" download>ダウンロード2</a> -->
 
 
 test
